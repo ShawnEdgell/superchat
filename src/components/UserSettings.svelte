@@ -35,7 +35,7 @@
     };
   </script>  
   
-  <div class="bg-white rounded-lg p-5 shadow-lg w-full max-w-md">
+  <div class="bg-white m-4 rounded-lg p-5 shadow-lg w-full max-w-md">
     <h2 class="text-lg font-semibold mb-4">User Settings</h2>
     <div class="mb-4">
       <label for="username" class="block text-gray-700 text-sm font-bold mb-2">
