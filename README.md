@@ -20,4 +20,4 @@ git clone https://github.com/yourusername/superchat.git
 cd superchat
 npm install
 
-![image](https://github.com/ShawnEdgell/superchat/assets/145321915/02dac848-02e4-419f-addc-b34fd4e041b8)
+![image](https://github.com/ShawnEdgell/superchat/assets/145321915/d8430392-2f45-4b76-b832-3e8b55897018)
