@@ -1,14 +1,14 @@
 <script>
     import { messages } from '../utils/store';
     import Message from './Message.svelte'; // Make sure this path is correct
-    import { onMount, tick } from 'svelte';
+    import { tick } from 'svelte';
 
     let messageListElement;
 
-    // This function will scroll to the last message
+    // This function will scroll to the last message if there are messages
     const scrollToBottom = () => {
         tick().then(() => {
-            if (messageListElement) {
+            if (messageListElement && messageListElement.lastElementChild) {
                 messageListElement.lastElementChild.scrollIntoView({ behavior: 'smooth' });
             }
         });

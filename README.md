@@ -19,6 +19,7 @@ To get started with SuperChat, clone the repository and install the dependencies
 git clone https://github.com/yourusername/superchat.git
 cd superchat
 npm install
+npm run dev
 ```
 
 ![image](https://github.com/ShawnEdgell/superchat/assets/145321915/d8430392-2f45-4b76-b832-3e8b55897018)
