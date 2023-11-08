@@ -1,13 +1,16 @@
 <script>
     export let message;
-    export let usernameColor;
-  </script>
-  
-  <div class="flex items-center space-x-2 p-2 my-1 bg-white rounded-lg shadow">
-    <span class="text-xs text-gray-500">
+    export let usernameColor; // This will be the color for the username text
+</script>
+
+<div class="flex items-baseline space-x-2 p-2">
+    <span class="text-sm ms-2 text-gray-500"> <!-- Updated text size -->
       {new Date(message.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
     </span>
-    <span class="text-sm font-semibold" style="color: {usernameColor || 'currentColor'}">{message.sender}</span>
-    <p class="text-gray-800 break-words flex-1">{message.text}</p>
-  </div>
-  
+    <span class="text-md font-semibold" style="color: {usernameColor || 'currentColor'}"> <!-- Updated text size -->
+      {message.sender}
+    </span>
+    <p class="flex-1 text-md text-gray-800 break-words"> <!-- Updated text size -->
+      {message.text}
+    </p>
+</div>

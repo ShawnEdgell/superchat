@@ -37,7 +37,6 @@
   }
   :global(body) {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: #edf2f7; /* A light grey background */
   }
 </style>
 

@@ -1,9 +1,15 @@
 <script>
     import { writable } from 'svelte/store';
   
-    // Create a store to hold the username and color values
-    export const usernameStore = writable(localStorage.getItem('username') || 'anon');
-    export const usernameColorStore = writable(localStorage.getItem('usernameColor') || '#9CA3AF');
+    // Generate a random number between 10000 and 99999
+    const generateRandomNumber = () => Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000;
+  
+    // Create stores to hold the username and color values
+    const defaultUsername = localStorage.getItem('username') || `anon#${generateRandomNumber()}`;
+    const defaultColor = localStorage.getItem('usernameColor') || '#9CA3AF';
+  
+    export const usernameStore = writable(defaultUsername);
+    export const usernameColorStore = writable(defaultColor);
   
     export let closeSettings;
   
@@ -15,19 +21,19 @@
       localStorage.setItem('usernameColor', value);
     });
   
-    // Initialize the username and color with values from localStorage
+    // Initialize the username and color with values from localStorage or defaults
     let username = $usernameStore;
     let usernameColor = $usernameColorStore;
   
     const saveSettings = () => {
       if (username.trim() === '') {
-        username = 'anon'; // Default to 'anon' if no username is set
+        username = `anon#${generateRandomNumber()}`; // Generate a new 'anon#' if no username is set
       }
       usernameStore.set(username);
       usernameColorStore.set(usernameColor);
       closeSettings();
     };
-  </script>
+  </script>  
   
   <div class="bg-white rounded-lg p-5 shadow-lg w-full max-w-md">
     <h2 class="text-lg font-semibold mb-4">User Settings</h2>
